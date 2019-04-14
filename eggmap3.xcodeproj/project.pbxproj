@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		ACB3E21D22591E280099B574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E21C22591E280099B574 /* AppDelegate.swift */; };
-		ACB3E21F22591E280099B574 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E21E22591E280099B574 /* ViewController.swift */; };
+		ACB3E21F22591E280099B574 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E21E22591E280099B574 /* LoginController.swift */; };
 		ACB3E22222591E280099B574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB3E22022591E280099B574 /* Main.storyboard */; };
 		ACB3E22522591E280099B574 /* eggmap3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E22322591E280099B574 /* eggmap3.xcdatamodeld */; };
 		ACB3E22722591E290099B574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB3E22622591E290099B574 /* Assets.xcassets */; };
 		ACB3E22A22591E290099B574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB3E22822591E290099B574 /* LaunchScreen.storyboard */; };
 		ACB3E23522591E290099B574 /* eggmap3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E23422591E290099B574 /* eggmap3Tests.swift */; };
 		ACB3E24022591E290099B574 /* eggmap3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E23F22591E290099B574 /* eggmap3UITests.swift */; };
+		ACB3E24E2259684A0099B574 /* GenericTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E24D2259684A0099B574 /* GenericTextFields.swift */; };
+		ACB3E25022596B020099B574 /* GenericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E24F22596B020099B574 /* GenericButton.swift */; };
+		ACB3E256225CF8740099B574 /* OrderDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB3E255225CF8740099B574 /* OrderDashboard.storyboard */; };
+		ACB3E258225CF8EF0099B574 /* OrdersRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E257225CF8EF0099B574 /* OrdersRootController.swift */; };
+		ACB3E25A225D2CC40099B574 /* ReadyOrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E259225D2CC40099B574 /* ReadyOrdersController.swift */; };
+		ACB3E25C225D2E860099B574 /* DeliveredOrdersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E25B225D2E860099B574 /* DeliveredOrdersController.swift */; };
+		ACB3E25E2263BB6A0099B574 /* OrdersPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E25D2263BB6A0099B574 /* OrdersPageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +44,7 @@
 /* Begin PBXFileReference section */
 		ACB3E21922591E280099B574 /* eggmap3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eggmap3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB3E21C22591E280099B574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACB3E21E22591E280099B574 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACB3E21E22591E280099B574 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		ACB3E22122591E280099B574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACB3E22422591E280099B574 /* eggmap3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eggmap3.xcdatamodel; sourceTree = "<group>"; };
 		ACB3E22622591E290099B574 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		ACB3E23B22591E290099B574 /* eggmap3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eggmap3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB3E23F22591E290099B574 /* eggmap3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eggmap3UITests.swift; sourceTree = "<group>"; };
 		ACB3E24122591E290099B574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACB3E24D2259684A0099B574 /* GenericTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTextFields.swift; sourceTree = "<group>"; };
+		ACB3E24F22596B020099B574 /* GenericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButton.swift; sourceTree = "<group>"; };
+		ACB3E255225CF8740099B574 /* OrderDashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderDashboard.storyboard; sourceTree = "<group>"; };
+		ACB3E257225CF8EF0099B574 /* OrdersRootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersRootController.swift; sourceTree = "<group>"; };
+		ACB3E259225D2CC40099B574 /* ReadyOrdersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyOrdersController.swift; sourceTree = "<group>"; };
+		ACB3E25B225D2E860099B574 /* DeliveredOrdersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveredOrdersController.swift; sourceTree = "<group>"; };
+		ACB3E25D2263BB6A0099B574 /* OrdersPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersPageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +113,15 @@
 		ACB3E21B22591E280099B574 /* eggmap3 */ = {
 			isa = PBXGroup;
 			children = (
+				ACB3E254225CF8280099B574 /* Controllers */,
+				ACB3E253225CF80D0099B574 /* Storyboards */,
 				ACB3E21C22591E280099B574 /* AppDelegate.swift */,
-				ACB3E21E22591E280099B574 /* ViewController.swift */,
-				ACB3E22022591E280099B574 /* Main.storyboard */,
 				ACB3E22622591E290099B574 /* Assets.xcassets */,
 				ACB3E22822591E290099B574 /* LaunchScreen.storyboard */,
 				ACB3E22B22591E290099B574 /* Info.plist */,
 				ACB3E22322591E280099B574 /* eggmap3.xcdatamodeld */,
+				ACB3E24D2259684A0099B574 /* GenericTextFields.swift */,
+				ACB3E24F22596B020099B574 /* GenericButton.swift */,
 			);
 			path = eggmap3;
 			sourceTree = "<group>";
@@ -126,6 +142,43 @@
 				ACB3E24122591E290099B574 /* Info.plist */,
 			);
 			path = eggmap3UITests;
+			sourceTree = "<group>";
+		};
+		ACB3E251225CF79B0099B574 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				ACB3E21E22591E280099B574 /* LoginController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		ACB3E252225CF7EB0099B574 /* OrderDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				ACB3E257225CF8EF0099B574 /* OrdersRootController.swift */,
+				ACB3E259225D2CC40099B574 /* ReadyOrdersController.swift */,
+				ACB3E25B225D2E860099B574 /* DeliveredOrdersController.swift */,
+				ACB3E25D2263BB6A0099B574 /* OrdersPageController.swift */,
+			);
+			path = OrderDashboard;
+			sourceTree = "<group>";
+		};
+		ACB3E253225CF80D0099B574 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ACB3E22022591E280099B574 /* Main.storyboard */,
+				ACB3E255225CF8740099B574 /* OrderDashboard.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		ACB3E254225CF8280099B574 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACB3E252225CF7EB0099B574 /* OrderDashboard */,
+				ACB3E251225CF79B0099B574 /* Auth */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB3E256225CF8740099B574 /* OrderDashboard.storyboard in Resources */,
 				ACB3E22A22591E290099B574 /* LaunchScreen.storyboard in Resources */,
 				ACB3E22722591E290099B574 /* Assets.xcassets in Resources */,
 				ACB3E22222591E280099B574 /* Main.storyboard in Resources */,
@@ -259,9 +313,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB3E25E2263BB6A0099B574 /* OrdersPageController.swift in Sources */,
+				ACB3E25A225D2CC40099B574 /* ReadyOrdersController.swift in Sources */,
+				ACB3E25C225D2E860099B574 /* DeliveredOrdersController.swift in Sources */,
 				ACB3E22522591E280099B574 /* eggmap3.xcdatamodeld in Sources */,
-				ACB3E21F22591E280099B574 /* ViewController.swift in Sources */,
+				ACB3E21F22591E280099B574 /* LoginController.swift in Sources */,
 				ACB3E21D22591E280099B574 /* AppDelegate.swift in Sources */,
+				ACB3E24E2259684A0099B574 /* GenericTextFields.swift in Sources */,
+				ACB3E258225CF8EF0099B574 /* OrdersRootController.swift in Sources */,
+				ACB3E25022596B020099B574 /* GenericButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
