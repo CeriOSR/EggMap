@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormButton: UIButton {
+class GenericButton: UIButton {
   
   @IBInspectable var firstColor: UIColor = UIColor.clear {
     didSet {

@@ -28,3 +28,23 @@ extension DeliveredOrdersController {
     
   }
 }
+
+class DeliveredOrdersCell: UITableViewCell {
+  
+  @IBOutlet weak var orderIdLbl: UILabel!
+  @IBOutlet weak var orderStatusLbl: UILabel!
+  @IBOutlet weak var dateLbl: UILabel!
+  @IBOutlet weak var productLbl: UILabel!
+  @IBOutlet weak var rateBtn: GenericButton!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    
+  }
+  
+  @IBAction func didTapRateBtn(_ sender: Any) {
+    //go to rate feature
+  }
+  
+}
+
