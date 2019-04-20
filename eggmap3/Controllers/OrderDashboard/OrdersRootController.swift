@@ -12,6 +12,7 @@ class OrdersRootController: UIViewController {
   
   let pageController = OrdersPageController()
   
+  @IBOutlet weak var topMenuView: UIView!
   @IBOutlet weak var readyBtn: UIButton!
   @IBOutlet weak var deliveredBtn: UIButton!
   @IBOutlet weak var pageContainerView: UIView!
@@ -22,6 +23,9 @@ class OrdersRootController: UIViewController {
   }
   
   private func setupViews() {
+    
+    topMenuView.layer.borderWidth = 0.5
+    topMenuView.layer.borderColor = UIColor.lightGray.cgColor
     
     guard let pageView = pageController.view else {return}
     pageView.translatesAutoresizingMaskIntoConstraints = false

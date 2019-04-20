@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Orders Root Controller-->
+        <!--Order Details-->
         <scene sceneID="z2o-4b-0dC">
             <objects>
                 <viewController id="UWc-y5-DgI" customClass="OrdersRootController" customModule="eggmap3" customModuleProvider="target" sceneMemberID="viewController">
@@ -181,34 +181,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="50b-Jg-wpP"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZAv-9T-APT"/>
+                    <navigationItem key="navigationItem" title="Order Details" id="ZAv-9T-APT"/>
                     <size key="freeformSize" width="375" height="812"/>
                     <connections>
                         <outlet property="deliveredBtn" destination="fy8-Yr-4Kh" id="iep-vI-JRQ"/>
                         <outlet property="pageContainerView" destination="g9Y-7S-dLc" id="yOF-62-L6Z"/>
                         <outlet property="readyBtn" destination="hJK-PA-FCS" id="TNW-H2-mQR"/>
+                        <outlet property="topMenuView" destination="cHn-bx-cd3" id="3kf-X8-9Ho"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVq-n6-xDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ykB-WR-j3o">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <prototypes>
-                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="r9O-Q9-ilc">
-                            <rect key="frame" x="0.0" y="28" width="375" height="120"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r9O-Q9-ilc" id="f3X-5f-gnw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </tableViewCellContentView>
-                        </tableViewCell>
-                    </prototypes>
-                    <connections>
-                        <outlet property="dataSource" destination="UWc-y5-DgI" id="ofC-dm-i4u"/>
-                        <outlet property="delegate" destination="UWc-y5-DgI" id="dcX-4P-I80"/>
-                    </connections>
-                </tableView>
             </objects>
             <point key="canvasLocation" x="2352.8000000000002" y="131.33433283358323"/>
         </scene>
@@ -221,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.046098001634611085" blue="0.079313186109589484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="45E-he-NXO" customClass="ReadyOrdersCell" customModule="eggmap3" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReadyOrdersCell" id="45E-he-NXO" customClass="ReadyOrdersCell" customModule="eggmap3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="45E-he-NXO" id="eZo-J1-GMI">
@@ -329,10 +311,10 @@
         <!--Orders Page Controller-->
         <scene sceneID="b6A-eS-gFg">
             <objects>
-                <pageViewController storyboardIdentifier="OrdersPageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="XPP-da-9f6" customClass="OrdersPageController" customModule="eggmap3" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="OrdersPageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="XPP-da-9f6" customClass="OrdersPageController" customModule="eggmap3" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYk-A4-2Ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="880"/>
+            <point key="canvasLocation" x="2353" y="890"/>
         </scene>
         <!--Delivered Orders Controller-->
         <scene sceneID="8KU-5r-Lnf">
@@ -343,7 +325,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.081085110900062429" green="0.079456137161702745" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eU5-sB-41K">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeliveredOrdersCell" id="eU5-sB-41K" customClass="DeliveredOrdersCell" customModule="eggmap3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eU5-sB-41K" id="nfR-s5-eB5">
@@ -397,6 +379,9 @@
                                                         <constraint firstAttribute="height" constant="50" id="x5y-F9-S1g"/>
                                                     </constraints>
                                                     <state key="normal" title="Button" image="EggMapDude"/>
+                                                    <connections>
+                                                        <action selector="didTapRateBtn:" destination="eU5-sB-41K" eventType="touchUpInside" id="Ndj-PD-7KU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -425,6 +410,13 @@
                                         <constraint firstItem="SGI-ju-aks" firstAttribute="leading" secondItem="nfR-s5-eB5" secondAttribute="leading" constant="10" id="nzS-Ec-lOS"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLbl" destination="eBj-nD-82U" id="8zS-tQ-obH"/>
+                                    <outlet property="orderIdLbl" destination="1OR-kW-sYj" id="r5F-rn-ufG"/>
+                                    <outlet property="orderStatusLbl" destination="idn-qM-hPm" id="ITY-oX-wnH"/>
+                                    <outlet property="productLbl" destination="OLV-YK-Cy9" id="PAf-PY-WeL"/>
+                                    <outlet property="rateBtn" destination="jCQ-jq-HQJ" id="E0j-Ze-go5"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

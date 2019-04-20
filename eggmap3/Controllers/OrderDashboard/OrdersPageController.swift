@@ -27,6 +27,7 @@ class OrdersPageController: UIPageViewController {
     //    self.delegate = self
     //    self.dataSource = self          //uncomment to allow the gesture based scrolling
     guard let firstVc = subviewControllers.first else {return}
+    
     setViewControllers([firstVc], direction: .forward, animated: true, completion: nil)
   }
   

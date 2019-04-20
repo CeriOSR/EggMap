@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC8ED33F226B9A1000B019E0 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED33E226B9A1000B019E0 /* Cells.swift */; };
+		AC8ED342226BAE9000B019E0 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED341226BAE9000B019E0 /* Orders.swift */; };
+		AC8ED344226BB06A00B019E0 /* VendorAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED343226BB06A00B019E0 /* VendorAvailability.swift */; };
+		AC8ED346226BB09B00B019E0 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED345226BB09B00B019E0 /* UserInfo.swift */; };
+		AC8ED348226BB0BB00B019E0 /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED347226BB0BB00B019E0 /* LocationInfo.swift */; };
+		AC8ED34A226BB18F00B019E0 /* VendorScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED349226BB18F00B019E0 /* VendorScheduleInfo.swift */; };
+		AC8ED34C226BB23300B019E0 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED34B226BB23300B019E0 /* AuthCredentials.swift */; };
 		ACB3E21D22591E280099B574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E21C22591E280099B574 /* AppDelegate.swift */; };
 		ACB3E21F22591E280099B574 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3E21E22591E280099B574 /* LoginController.swift */; };
 		ACB3E22222591E280099B574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB3E22022591E280099B574 /* Main.storyboard */; };
@@ -42,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC8ED33E226B9A1000B019E0 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		AC8ED341226BAE9000B019E0 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
+		AC8ED343226BB06A00B019E0 /* VendorAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorAvailability.swift; sourceTree = "<group>"; };
+		AC8ED345226BB09B00B019E0 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		AC8ED347226BB0BB00B019E0 /* LocationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfo.swift; sourceTree = "<group>"; };
+		AC8ED349226BB18F00B019E0 /* VendorScheduleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorScheduleInfo.swift; sourceTree = "<group>"; };
+		AC8ED34B226BB23300B019E0 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
 		ACB3E21922591E280099B574 /* eggmap3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eggmap3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB3E21C22591E280099B574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB3E21E22591E280099B574 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -90,6 +104,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC8ED33D226B99CE00B019E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC8ED33E226B9A1000B019E0 /* Cells.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC8ED340226BAE5E00B019E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC8ED341226BAE9000B019E0 /* Orders.swift */,
+				AC8ED343226BB06A00B019E0 /* VendorAvailability.swift */,
+				AC8ED345226BB09B00B019E0 /* UserInfo.swift */,
+				AC8ED347226BB0BB00B019E0 /* LocationInfo.swift */,
+				AC8ED349226BB18F00B019E0 /* VendorScheduleInfo.swift */,
+				AC8ED34B226BB23300B019E0 /* AuthCredentials.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		ACB3E21022591E280099B574 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +148,8 @@
 		ACB3E21B22591E280099B574 /* eggmap3 */ = {
 			isa = PBXGroup;
 			children = (
+				AC8ED340226BAE5E00B019E0 /* Models */,
+				AC8ED33D226B99CE00B019E0 /* Extensions */,
 				ACB3E254225CF8280099B574 /* Controllers */,
 				ACB3E253225CF80D0099B574 /* Storyboards */,
 				ACB3E21C22591E280099B574 /* AppDelegate.swift */,
@@ -313,15 +350,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8ED34C226BB23300B019E0 /* AuthCredentials.swift in Sources */,
+				AC8ED342226BAE9000B019E0 /* Orders.swift in Sources */,
 				ACB3E25E2263BB6A0099B574 /* OrdersPageController.swift in Sources */,
 				ACB3E25A225D2CC40099B574 /* ReadyOrdersController.swift in Sources */,
 				ACB3E25C225D2E860099B574 /* DeliveredOrdersController.swift in Sources */,
+				AC8ED34A226BB18F00B019E0 /* VendorScheduleInfo.swift in Sources */,
 				ACB3E22522591E280099B574 /* eggmap3.xcdatamodeld in Sources */,
 				ACB3E21F22591E280099B574 /* LoginController.swift in Sources */,
+				AC8ED348226BB0BB00B019E0 /* LocationInfo.swift in Sources */,
 				ACB3E21D22591E280099B574 /* AppDelegate.swift in Sources */,
 				ACB3E24E2259684A0099B574 /* GenericTextFields.swift in Sources */,
+				AC8ED346226BB09B00B019E0 /* UserInfo.swift in Sources */,
 				ACB3E258225CF8EF0099B574 /* OrdersRootController.swift in Sources */,
 				ACB3E25022596B020099B574 /* GenericButton.swift in Sources */,
+				AC8ED344226BB06A00B019E0 /* VendorAvailability.swift in Sources */,
+				AC8ED33F226B9A1000B019E0 /* Cells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
