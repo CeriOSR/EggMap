@@ -12,10 +12,14 @@ class OrdersRootController: UIViewController {
   
   let pageController = OrdersPageController()
   
+  @IBOutlet weak var blackScreenView: UIView!
   @IBOutlet weak var topMenuView: UIView!
   @IBOutlet weak var readyBtn: UIButton!
   @IBOutlet weak var deliveredBtn: UIButton!
   @IBOutlet weak var pageContainerView: UIView!
+  @IBOutlet weak var menuView: UIView!
+  var menuOut: Bool = false
+  @IBOutlet weak var menuViewLeadingConstraint: NSLayoutConstraint!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,7 +27,7 @@ class OrdersRootController: UIViewController {
   }
   
   private func setupViews() {
-    
+    blackScreenView.isHidden = true
     topMenuView.layer.borderWidth = 0.5
     topMenuView.layer.borderColor = UIColor.lightGray.cgColor
     
@@ -37,6 +41,29 @@ class OrdersRootController: UIViewController {
 
   }
   
+  @IBAction func didTapMenuBarBtn(_ sender: Any) {
+    if menuOut == false {
+      menuOut = true
+      UIView.animate(withDuration: 0.3, animations: { [weak self] in
+        self?.menuView.transform = CGAffineTransform(translationX: 247.5, y: 0)
+        self?.blackScreenView.isHidden = false
+        self?.blackScreenView.layer.zPosition = 0
+      }) { (_) in
+        //load user info here
+      }
+    } else {
+      menuOut = false
+      UIView.animate(withDuration: 0.3, animations: { [weak self] in
+        self?.menuView.transform = .identity
+        self?.blackScreenView.isHidden = true
+        self?.blackScreenView.layer.zPosition = 1
+      }) { (_) in
+//        completion here
+      }
+    }
+    
+    
+  }
   @IBAction func didTapReadyBtn(_ sender: Any) {
     self.pageController.nextPageWithIndex(index: 0)
     self.pageController.currentIndex = 0
