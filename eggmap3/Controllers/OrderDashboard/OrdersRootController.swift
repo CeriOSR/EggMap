@@ -18,8 +18,16 @@ class OrdersRootController: UIViewController {
   @IBOutlet weak var deliveredBtn: UIButton!
   @IBOutlet weak var pageContainerView: UIView!
   @IBOutlet weak var menuView: UIView!
+  
+  @IBOutlet weak var profileImageView: UIImageView!
+  
+  //Menu btns to hide if client
+  @IBOutlet weak var earningsBtn: UIButton!
+  @IBOutlet weak var scantToolBtn: UIButton!
+  
+  
   var menuOut: Bool = false
-  @IBOutlet weak var menuViewLeadingConstraint: NSLayoutConstraint!
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -77,4 +85,35 @@ class OrdersRootController: UIViewController {
     deliveredBtn.setTitleColor(view.tintColor, for: .normal)
     readyBtn.setTitleColor(UIColor.lightGray, for: .normal)
   }
+  
+  
+  //Menu buttons
+  @IBAction func didTapEditProfileBtn(_ sender: Any) {
+  }
+  
+  
+  @IBAction func didTapOrderSummaryBtn(_ sender: Any) {
+  }
+  
+  @IBAction func didTapMarketBtn(_ sender: Any) {
+  }
+  
+  @IBAction func didTapRatingsBtn(_ sender: Any) {
+  }
+  
+  @IBAction func didTapEarningsBtn(_ sender: Any) {
+  }
+  
+  @IBAction func didTapScanToolBtn(_ sender: Any) {
+  }
+  
+  @IBAction func didTapLogoutBtn(_ sender: Any) {
+  }
+  
 }
+
+//Menu Btns
+extension OrdersRootController {
+  
+}
+
