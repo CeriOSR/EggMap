@@ -78,7 +78,7 @@ class OrdersRootController: UIViewController {
     deliveredBtn.setTitleColor(UIColor.lightGray, for: .normal)
     readyBtn.setTitleColor(view.tintColor, for: .normal)
   }
-  
+
   @IBAction func didTapDeliveredBtn(_ sender: Any) {
     pageController.nextPageWithIndex(index: 1)
     pageController.currentIndex = 1

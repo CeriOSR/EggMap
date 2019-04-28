@@ -62,11 +62,11 @@
                                 <viewLayoutGuide key="safeArea" id="cFi-v7-zz0"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbd-T8-bcM">
-                                <rect key="frame" x="247.5" y="0.0" width="127.5" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.41846390845070425" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6N-9b-nQn" userLabel="Slide in Menu View">
-                                <rect key="frame" x="0.0" y="0.0" width="247.5" height="812"/>
+                                <rect key="frame" x="-247.5" y="0.0" width="247.5" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2k-64-Mp9">
                                         <rect key="frame" x="3" y="191" width="241.5" height="2"/>
@@ -117,7 +117,7 @@
                                         </constraints>
                                         <state key="normal" title="Order Summar"/>
                                         <connections>
-                                            <action selector="orderSummaryBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="iLe-NJ-nrt"/>
+                                            <action selector="didTapOrderSummaryBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="xBA-km-GU0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9O-M8-JLH">
@@ -128,7 +128,7 @@
                                         </constraints>
                                         <state key="normal" title="XBO Market Shop"/>
                                         <connections>
-                                            <action selector="marketBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="BdW-1y-Smt"/>
+                                            <action selector="didTapMarketBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="tn0-kp-CWi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MM-Wh-Sqb">
@@ -139,12 +139,15 @@
                                         </constraints>
                                         <state key="normal" title="My Ratings"/>
                                         <connections>
-                                            <action selector="ratingsBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="ZVB-eL-q3Q"/>
+                                            <action selector="didTapRatingsBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="Rh8-AB-Mnk"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXU-eX-jWQ">
                                         <rect key="frame" x="3" y="406" width="241.5" height="2"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="74u-pt-HHv"/>
+                                        </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeM-KM-7Yu">
                                         <rect key="frame" x="14" y="442" width="219.5" height="44"/>
@@ -170,7 +173,7 @@
                                             <action selector="didTapScanToolBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="gKO-51-QYM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe4-vL-YES">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe4-vL-YES" userLabel="Edit Profile Btn">
                                         <rect key="frame" x="189" y="92" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="HjV-Zn-0Nj"/>
@@ -178,7 +181,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="EggMapDude"/>
                                         <connections>
-                                            <action selector="editProfileBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="6ji-Ac-kGD"/>
+                                            <action selector="didTapEditProfileBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="56h-qP-7vN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -210,7 +213,6 @@
                                     <constraint firstItem="2La-bi-EaB" firstAttribute="bottom" secondItem="9Lr-hB-l9e" secondAttribute="bottom" constant="180" id="dq6-HC-QKP"/>
                                     <constraint firstItem="mXU-eX-jWQ" firstAttribute="top" secondItem="5MM-Wh-Sqb" secondAttribute="bottom" constant="41" id="fGz-wc-wcs"/>
                                     <constraint firstItem="Z9O-M8-JLH" firstAttribute="top" secondItem="aHk-M7-hHp" secondAttribute="bottom" constant="10" id="fzc-ca-GoS"/>
-                                    <constraint firstItem="TeM-KM-7Yu" firstAttribute="top" secondItem="mXU-eX-jWQ" secondAttribute="bottom" constant="34" id="gL2-t4-N93"/>
                                     <constraint firstAttribute="trailing" secondItem="D2k-64-Mp9" secondAttribute="trailing" constant="3" id="idz-yM-wRO"/>
                                     <constraint firstItem="O4T-aw-BN1" firstAttribute="leading" secondItem="2La-bi-EaB" secondAttribute="leading" constant="14" id="k5c-mQ-UQI"/>
                                     <constraint firstItem="aHk-M7-hHp" firstAttribute="top" secondItem="D2k-64-Mp9" secondAttribute="bottom" constant="20" id="lRE-zu-clq"/>
@@ -234,7 +236,7 @@
                             <constraint firstItem="g9Y-7S-dLc" firstAttribute="bottom" secondItem="50b-Jg-wpP" secondAttribute="bottom" id="EvE-LN-F3s"/>
                             <constraint firstItem="O6N-9b-nQn" firstAttribute="bottom" secondItem="50b-Jg-wpP" secondAttribute="bottom" id="IYn-hT-LMs"/>
                             <constraint firstItem="hbd-T8-bcM" firstAttribute="top" secondItem="bDz-gK-tQ0" secondAttribute="top" id="Kx3-f0-6I3"/>
-                            <constraint firstItem="O6N-9b-nQn" firstAttribute="leading" secondItem="50b-Jg-wpP" secondAttribute="leading" id="RTI-vm-Ojb"/>
+                            <constraint firstItem="O6N-9b-nQn" firstAttribute="leading" secondItem="50b-Jg-wpP" secondAttribute="leading" constant="-247.5" id="RTI-vm-Ojb"/>
                             <constraint firstItem="g9Y-7S-dLc" firstAttribute="leading" secondItem="50b-Jg-wpP" secondAttribute="leading" id="V0z-xv-b1H"/>
                             <constraint firstItem="O6N-9b-nQn" firstAttribute="top" secondItem="50b-Jg-wpP" secondAttribute="top" constant="-64" id="Zgy-GS-mNU"/>
                             <constraint firstAttribute="bottom" secondItem="hbd-T8-bcM" secondAttribute="bottom" id="kaN-wN-yx8"/>
@@ -256,7 +258,6 @@
                         <outlet property="deliveredBtn" destination="fy8-Yr-4Kh" id="iep-vI-JRQ"/>
                         <outlet property="earningsBtn" destination="TeM-KM-7Yu" id="MXL-a8-LKh"/>
                         <outlet property="menuView" destination="O6N-9b-nQn" id="r2t-3h-rcp"/>
-                        <outlet property="menuViewLeadingConstraint" destination="RTI-vm-Ojb" id="qAg-U6-0Lt"/>
                         <outlet property="pageContainerView" destination="g9Y-7S-dLc" id="yOF-62-L6Z"/>
                         <outlet property="profileImageView" destination="CIY-aO-fGU" id="hdy-2b-hpP"/>
                         <outlet property="readyBtn" destination="hJK-PA-FCS" id="TNW-H2-mQR"/>
