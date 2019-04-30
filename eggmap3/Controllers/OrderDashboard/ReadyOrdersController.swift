@@ -8,6 +8,14 @@
 
 import UIKit
 
+fileprivate enum Segue: String {
+  case showClientMapView = "ShowClientMapView"
+  
+  func perform(inViewController vc: UIViewController) {
+    vc.performSegue(withIdentifier: rawValue, sender: vc)
+  }
+}
+
 class ReadyOrdersController: UITableViewController {
   
   var readyOrders = [DeliveredOrder]()
@@ -41,6 +49,10 @@ extension ReadyOrdersController {
     cell.productLbl.text = order.orderDetails?[0].productName
     return cell
     
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    Segue.showClientMapView.perform(inViewController: self)
   }
 }
 

@@ -378,10 +378,21 @@
                         </connections>
                     </tableView>
                     <size key="freeformSize" width="375" height="812"/>
+                    <connections>
+                        <segue destination="8sp-ZO-Q48" kind="show" identifier="ShowClientMapView" id="V6u-SD-JKI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ON1-XN-ZNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3536.8000000000002" y="-205.09745127436284"/>
+        </scene>
+        <!--MapviewController-->
+        <scene sceneID="RJn-qj-CzX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MapView" referencedIdentifier="MapviewController" id="8sp-ZO-Q48" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9Q-GY-DOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4285" y="-544"/>
         </scene>
         <!--Orders Page Controller-->
         <scene sceneID="b6A-eS-gFg">
