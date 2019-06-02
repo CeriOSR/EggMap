@@ -13,7 +13,10 @@
 		AC8134E622774F600071E779 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8134E522774F600071E779 /* MapView.storyboard */; };
 		AC8134E9227750160071E779 /* MapviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8134E8227750160071E779 /* MapviewController.swift */; };
 		AC8134EB227754600071E779 /* QRCodeScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8134EA227754600071E779 /* QRCodeScannerController.swift */; };
-		AC8ED33F226B9A1000B019E0 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED33E226B9A1000B019E0 /* Cells.swift */; };
+		AC8134ED22A0492D0071E779 /* QRReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8134EC22A0492D0071E779 /* QRReader.storyboard */; };
+		AC8134EF22A0571A0071E779 /* WebViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8134EE22A0571A0071E779 /* WebViews.storyboard */; };
+		AC8134F122A063E50071E779 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8134F022A063E50071E779 /* WebViewController.swift */; };
+		AC8ED33F226B9A1000B019E0 /* StringRepresentations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED33E226B9A1000B019E0 /* StringRepresentations.swift */; };
 		AC8ED342226BAE9000B019E0 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED341226BAE9000B019E0 /* Orders.swift */; };
 		AC8ED344226BB06A00B019E0 /* VendorAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED343226BB06A00B019E0 /* VendorAvailability.swift */; };
 		AC8ED346226BB09B00B019E0 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED345226BB09B00B019E0 /* UserInfo.swift */; };
@@ -65,7 +68,10 @@
 		AC8134E522774F600071E779 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		AC8134E8227750160071E779 /* MapviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapviewController.swift; sourceTree = "<group>"; };
 		AC8134EA227754600071E779 /* QRCodeScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScannerController.swift; sourceTree = "<group>"; };
-		AC8ED33E226B9A1000B019E0 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		AC8134EC22A0492D0071E779 /* QRReader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRReader.storyboard; sourceTree = "<group>"; };
+		AC8134EE22A0571A0071E779 /* WebViews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViews.storyboard; sourceTree = "<group>"; };
+		AC8134F022A063E50071E779 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		AC8ED33E226B9A1000B019E0 /* StringRepresentations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentations.swift; sourceTree = "<group>"; };
 		AC8ED341226BAE9000B019E0 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		AC8ED343226BB06A00B019E0 /* VendorAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorAvailability.swift; sourceTree = "<group>"; };
 		AC8ED345226BB09B00B019E0 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -138,7 +144,7 @@
 		AC8ED33D226B99CE00B019E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AC8ED33E226B9A1000B019E0 /* Cells.swift */,
+				AC8ED33E226B9A1000B019E0 /* StringRepresentations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -240,6 +246,8 @@
 				ACB3E255225CF8740099B574 /* OrderDashboard.storyboard */,
 				AC8134E32271792B0071E779 /* Storyboard.storyboard */,
 				AC8134E522774F600071E779 /* MapView.storyboard */,
+				AC8134EC22A0492D0071E779 /* QRReader.storyboard */,
+				AC8134EE22A0571A0071E779 /* WebViews.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 				AC8134E722774FEA0071E779 /* MapView */,
 				ACB3E252225CF7EB0099B574 /* OrderDashboard */,
 				ACB3E251225CF79B0099B574 /* Auth */,
+				AC8134F022A063E50071E779 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -395,7 +404,9 @@
 				ACB3E22A22591E290099B574 /* LaunchScreen.storyboard in Resources */,
 				AC8134E622774F600071E779 /* MapView.storyboard in Resources */,
 				ACB3E22722591E290099B574 /* Assets.xcassets in Resources */,
+				AC8134ED22A0492D0071E779 /* QRReader.storyboard in Resources */,
 				ACB3E22222591E280099B574 /* Main.storyboard in Resources */,
+				AC8134EF22A0571A0071E779 /* WebViews.storyboard in Resources */,
 				AC8134E42271792B0071E779 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8134F122A063E50071E779 /* WebViewController.swift in Sources */,
 				AC8ED34C226BB23300B019E0 /* AuthCredentials.swift in Sources */,
 				AC8ED342226BAE9000B019E0 /* Orders.swift in Sources */,
 				ACB3E25E2263BB6A0099B574 /* OrdersPageController.swift in Sources */,
@@ -609,7 +621,7 @@
 				ACB3E258225CF8EF0099B574 /* OrdersRootController.swift in Sources */,
 				ACB3E25022596B020099B574 /* GenericButton.swift in Sources */,
 				AC8ED344226BB06A00B019E0 /* VendorAvailability.swift in Sources */,
-				AC8ED33F226B9A1000B019E0 /* Cells.swift in Sources */,
+				AC8ED33F226B9A1000B019E0 /* StringRepresentations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Pl-JP-Idz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Mapview Controller-->
+        <!--Map View-->
         <scene sceneID="3KL-0L-gVk">
             <objects>
                 <viewController storyboardIdentifier="MapviewController" id="Zyh-Ca-XMP" customClass="MapviewController" customModule="eggmap3" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="97d-a4-Rh0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wub-LH-04W"/>
+                    <navigationItem key="navigationItem" title="Map View" id="wub-LH-04W"/>
                     <size key="freeformSize" width="375" height="812"/>
                     <connections>
                         <outlet property="mapContainerView" destination="RhZ-og-ozY" id="6Xf-PD-xkb"/>

@@ -28,4 +28,3 @@ extension UIViewController {
     return String(describing: self)
   }
 }
-

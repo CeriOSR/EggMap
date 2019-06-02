@@ -8,6 +8,16 @@
 
 import UIKit
 
+fileprivate enum Segue: String {
+  case toQRScanner = "seg_QRReader"
+  case toLoginForm = "seg_toLoginForm"
+  case toWebViewForm = "seg_WebViewForm"
+  
+  func perform(inViewController vc: UIViewController) {
+    vc.performSegue(withIdentifier: rawValue, sender: vc)
+  }
+}
+
 class OrdersRootController: UIViewController {
   
   let pageController = OrdersPageController()
@@ -93,27 +103,51 @@ class OrdersRootController: UIViewController {
   
   
   @IBAction func didTapOrderSummaryBtn(_ sender: Any) {
+    Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapMarketBtn(_ sender: Any) {
+    Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapRatingsBtn(_ sender: Any) {
+    Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapEarningsBtn(_ sender: Any) {
+    Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapScanToolBtn(_ sender: Any) {
+    Segue.toQRScanner.perform(inViewController: self)
   }
   
   @IBAction func didTapLogoutBtn(_ sender: Any) {
+    Segue.toLoginForm.perform(inViewController: self)
   }
   
 }
 
-//Menu Btns
 extension OrdersRootController {
-  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //send URLs here for webviews
+    //pass data here
+    if segue.destination == UINavigationController() {
+      let destination = UINavigationController().topViewController as! WebViewController
+      let sender = sender as! UIButton
+      switch sender.tag {
+      case 1:
+        destination.urlString = "https://facebook.com"
+      case 2:
+        destination.urlString = "https://youtube.com"
+      case 3:
+        destination.urlString = "https://starbucks.com"
+      case 4:
+        destination.urlString = "https://medium.com"
+      default:
+        return
+      }
+    }
+  }
 }
 

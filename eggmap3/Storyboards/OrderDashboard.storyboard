@@ -110,7 +110,7 @@
                                             <action selector="didTapLogoutBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="icN-Va-1sZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHk-M7-hHp">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHk-M7-hHp">
                                         <rect key="frame" x="14" y="213" width="219.5" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Q2j-8A-Jel"/>
@@ -120,7 +120,7 @@
                                             <action selector="didTapOrderSummaryBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="xBA-km-GU0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9O-M8-JLH">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9O-M8-JLH">
                                         <rect key="frame" x="14" y="267" width="219.5" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="7WH-8V-4yr"/>
@@ -131,7 +131,7 @@
                                             <action selector="didTapMarketBtn:" destination="UWc-y5-DgI" eventType="touchUpInside" id="tn0-kp-CWi"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MM-Wh-Sqb">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MM-Wh-Sqb">
                                         <rect key="frame" x="14" y="321" width="219.5" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="CwF-uM-qSd"/>
@@ -149,7 +149,7 @@
                                             <constraint firstAttribute="height" constant="2" id="74u-pt-HHv"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeM-KM-7Yu">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeM-KM-7Yu">
                                         <rect key="frame" x="14" y="442" width="219.5" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="fBw-gl-Ncr"/>
@@ -263,6 +263,9 @@
                         <outlet property="readyBtn" destination="hJK-PA-FCS" id="TNW-H2-mQR"/>
                         <outlet property="scantToolBtn" destination="O4T-aw-BN1" id="gfv-Yc-PRQ"/>
                         <outlet property="topMenuView" destination="cHn-bx-cd3" id="3kf-X8-9Ho"/>
+                        <segue destination="1rK-8X-xkK" kind="show" identifier="seg_QRReader" id="5zK-TG-rmO"/>
+                        <segue destination="WJH-vZ-wJz" kind="show" identifier="seg_toLoginForm" id="sZC-LK-qrV"/>
+                        <segue destination="jkX-1o-Kaa" kind="show" identifier="seg_WebViewForm" id="LIb-eH-h9o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVq-n6-xDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,7 +387,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ON1-XN-ZNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3536.8000000000002" y="-205.09745127436284"/>
+            <point key="canvasLocation" x="2842" y="891"/>
         </scene>
         <!--MapviewController-->
         <scene sceneID="RJn-qj-CzX">
@@ -392,7 +395,31 @@
                 <viewControllerPlaceholder storyboardName="MapView" referencedIdentifier="MapviewController" id="8sp-ZO-Q48" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9Q-GY-DOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4285" y="-544"/>
+            <point key="canvasLocation" x="3278" y="1414"/>
+        </scene>
+        <!--QRReader-->
+        <scene sceneID="Ab3-Ka-ZeH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QRReader" id="1rK-8X-xkK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5z9-fH-mSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3526" y="-287"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="KZC-l5-5Rz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="WJH-vZ-wJz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nt1-Rh-UVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3574" y="-219"/>
+        </scene>
+        <!--WebViews-->
+        <scene sceneID="fKh-Zu-gzq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WebViews" id="jkX-1o-Kaa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5h-GG-3mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3639" y="-145"/>
         </scene>
         <!--Orders Page Controller-->
         <scene sceneID="b6A-eS-gFg">
@@ -400,7 +427,7 @@
                 <pageViewController storyboardIdentifier="OrdersPageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="XPP-da-9f6" customClass="OrdersPageController" customModule="eggmap3" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYk-A4-2Ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2353" y="890"/>
+            <point key="canvasLocation" x="2044" y="828"/>
         </scene>
         <!--Delivered Orders Controller-->
         <scene sceneID="8KU-5r-Lnf">
@@ -514,7 +541,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lh6-Mw-Uco" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3543.1999999999998" y="658.4707646176912"/>
+            <point key="canvasLocation" x="3714" y="892"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3fM-Hu-Jqz">
