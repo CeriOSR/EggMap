@@ -34,6 +34,10 @@ class OrdersRootController: UIViewController {
   //Menu btns to hide if client
   @IBOutlet weak var earningsBtn: UIButton!
   @IBOutlet weak var scantToolBtn: UIButton!
+  @IBOutlet weak var requestListBtn: UIButton?
+  @IBOutlet weak var requestMapBtn: UIButton?
+  @IBOutlet weak var deliveredMenuBtn: UIButton?
+  @IBOutlet weak var ordersTakenBtn: UIButton?
   
   
   var menuOut: Bool = false
@@ -111,6 +115,22 @@ class OrdersRootController: UIViewController {
   }
   
   @IBAction func didTapRatingsBtn(_ sender: Any) {
+    Segue.toWebViewForm.perform(inViewController: self)
+  }
+  
+  @IBAction func didTapRequestListBtn(_ sender: Any) {
+    Segue.toWebViewForm.perform(inViewController: self)
+  }
+  
+  @IBAction func didTapRequestMapBtn(_ sender: Any) {
+    Segue.toWebViewForm.perform(inViewController: self)
+  }
+  
+  @IBAction func didTapOrdersTakenBtn(_ sender: Any) {
+    Segue.toWebViewForm.perform(inViewController: self)
+  }
+  
+  @IBAction func didTapDeliveredMenuBtn(_ sender: Any) {
     Segue.toWebViewForm.perform(inViewController: self)
   }
   
