@@ -41,7 +41,7 @@ class OrdersRootController: UIViewController {
   
   
   var menuOut: Bool = false
-  
+  var tag = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -103,46 +103,57 @@ class OrdersRootController: UIViewController {
   
   //Menu buttons
   @IBAction func didTapEditProfileBtn(_ sender: Any) {
+    tag = 1
   }
   
   
   @IBAction func didTapOrderSummaryBtn(_ sender: Any) {
+    tag = 2
     Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapMarketBtn(_ sender: Any) {
+    tag = 3
     Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapRatingsBtn(_ sender: Any) {
+    tag = 4
     Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapRequestListBtn(_ sender: Any) {
+    tag = 5
     Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapRequestMapBtn(_ sender: Any) {
+    tag = 6
     Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapOrdersTakenBtn(_ sender: Any) {
+    tag = 7
     Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapDeliveredMenuBtn(_ sender: Any) {
+    tag = 8
     Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapEarningsBtn(_ sender: Any) {
+    tag = 9
     Segue.toWebViewForm.perform(inViewController: self)
   }
   
   @IBAction func didTapScanToolBtn(_ sender: Any) {
+    tag = 10
     Segue.toQRScanner.perform(inViewController: self)
   }
   
   @IBAction func didTapLogoutBtn(_ sender: Any) {
+    tag = 11
     Segue.toLoginForm.perform(inViewController: self)
   }
   
@@ -152,10 +163,11 @@ extension OrdersRootController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     //send URLs here for webviews
     //pass data here
-    if segue.destination == UINavigationController() {
-      let destination = UINavigationController().topViewController as! WebViewController
-      let sender = sender as! UIButton
-      switch sender.tag {
+    
+    if segue.identifier == Segue.toWebViewForm.rawValue {
+      let navDestination = segue.destination as! UINavigationController
+      let destination = navDestination.topViewController as! WebViewController
+      switch tag {
       case 1:
         destination.urlString = "https://facebook.com"
       case 2:

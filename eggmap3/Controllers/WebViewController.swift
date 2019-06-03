@@ -12,14 +12,7 @@ import WebKit
 class WebViewController: UIViewController , WKNavigationDelegate{
   
   @IBOutlet weak var webView: WKWebView! 
-  var urlString: String? {
-    didSet{
-      guard let urlString = urlString else {return}
-      guard let url = URL(string: urlString) else {return}
-      webView.load(URLRequest(url: url))
-      webView.allowsBackForwardNavigationGestures = true
-    }
-  }
+  var urlString: String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
