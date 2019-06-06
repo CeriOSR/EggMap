@@ -16,6 +16,8 @@
 		AC8134ED22A0492D0071E779 /* QRReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8134EC22A0492D0071E779 /* QRReader.storyboard */; };
 		AC8134EF22A0571A0071E779 /* WebViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8134EE22A0571A0071E779 /* WebViews.storyboard */; };
 		AC8134F122A063E50071E779 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8134F022A063E50071E779 /* WebViewController.swift */; };
+		AC8134F322A5DCAC0071E779 /* ProfileSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8134F222A5DCAC0071E779 /* ProfileSettings.storyboard */; };
+		AC8134F622A985F70071E779 /* AgentProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8134F522A985F70071E779 /* AgentProfileController.swift */; };
 		AC8ED33F226B9A1000B019E0 /* StringRepresentations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED33E226B9A1000B019E0 /* StringRepresentations.swift */; };
 		AC8ED342226BAE9000B019E0 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED341226BAE9000B019E0 /* Orders.swift */; };
 		AC8ED344226BB06A00B019E0 /* VendorAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ED343226BB06A00B019E0 /* VendorAvailability.swift */; };
@@ -71,6 +73,8 @@
 		AC8134EC22A0492D0071E779 /* QRReader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRReader.storyboard; sourceTree = "<group>"; };
 		AC8134EE22A0571A0071E779 /* WebViews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViews.storyboard; sourceTree = "<group>"; };
 		AC8134F022A063E50071E779 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		AC8134F222A5DCAC0071E779 /* ProfileSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileSettings.storyboard; sourceTree = "<group>"; };
+		AC8134F522A985F70071E779 /* AgentProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentProfileController.swift; sourceTree = "<group>"; };
 		AC8ED33E226B9A1000B019E0 /* StringRepresentations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentations.swift; sourceTree = "<group>"; };
 		AC8ED341226BAE9000B019E0 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		AC8ED343226BB06A00B019E0 /* VendorAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorAvailability.swift; sourceTree = "<group>"; };
@@ -139,6 +143,30 @@
 				AC8134E8227750160071E779 /* MapviewController.swift */,
 			);
 			path = MapView;
+			sourceTree = "<group>";
+		};
+		AC8134F422A985800071E779 /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				AC8134F522A985F70071E779 /* AgentProfileController.swift */,
+			);
+			path = Profiles;
+			sourceTree = "<group>";
+		};
+		AC8134F722A98B350071E779 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				AC8134F022A063E50071E779 /* WebViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		AC8134F822A98C120071E779 /* QRReader */ = {
+			isa = PBXGroup;
+			children = (
+				AC8134EA227754600071E779 /* QRCodeScannerController.swift */,
+			);
+			path = QRReader;
 			sourceTree = "<group>";
 		};
 		AC8ED33D226B99CE00B019E0 /* Extensions */ = {
@@ -248,6 +276,7 @@
 				AC8134E522774F600071E779 /* MapView.storyboard */,
 				AC8134EC22A0492D0071E779 /* QRReader.storyboard */,
 				AC8134EE22A0571A0071E779 /* WebViews.storyboard */,
+				AC8134F222A5DCAC0071E779 /* ProfileSettings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -255,11 +284,12 @@
 		ACB3E254225CF8280099B574 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AC8134EA227754600071E779 /* QRCodeScannerController.swift */,
+				AC8134F822A98C120071E779 /* QRReader */,
+				AC8134F722A98B350071E779 /* WebView */,
+				AC8134F422A985800071E779 /* Profiles */,
 				AC8134E722774FEA0071E779 /* MapView */,
 				ACB3E252225CF7EB0099B574 /* OrderDashboard */,
 				ACB3E251225CF79B0099B574 /* Auth */,
-				AC8134F022A063E50071E779 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -406,6 +436,7 @@
 				ACB3E22722591E290099B574 /* Assets.xcassets in Resources */,
 				AC8134ED22A0492D0071E779 /* QRReader.storyboard in Resources */,
 				ACB3E22222591E280099B574 /* Main.storyboard in Resources */,
+				AC8134F322A5DCAC0071E779 /* ProfileSettings.storyboard in Resources */,
 				AC8134EF22A0571A0071E779 /* WebViews.storyboard in Resources */,
 				AC8134E42271792B0071E779 /* Storyboard.storyboard in Resources */,
 			);
@@ -614,6 +645,7 @@
 				AC8134E9227750160071E779 /* MapviewController.swift in Sources */,
 				ACB3E21F22591E280099B574 /* LoginController.swift in Sources */,
 				AC8ED348226BB0BB00B019E0 /* LocationInfo.swift in Sources */,
+				AC8134F622A985F70071E779 /* AgentProfileController.swift in Sources */,
 				ACB3E21D22591E280099B574 /* AppDelegate.swift in Sources */,
 				ACB3E24E2259684A0099B574 /* GenericTextFields.swift in Sources */,
 				AC8134EB227754600071E779 /* QRCodeScannerController.swift in Sources */,
