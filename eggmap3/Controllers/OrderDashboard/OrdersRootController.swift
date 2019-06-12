@@ -28,17 +28,17 @@ class OrdersRootController: UIViewController {
   @IBOutlet weak var readyBtn: UIButton!
   @IBOutlet weak var deliveredBtn: UIButton!
   @IBOutlet weak var pageContainerView: UIView!
-  @IBOutlet weak var menuView: UIView!
+  let menuView = Bundle.main.loadNibNamed("MenuView", owner: self, options: nil)?.first as! MenuView
   
-  @IBOutlet weak var profileImageView: UIImageView!
+//  @IBOutlet weak var profileImageView: UIImageView!
   
   //Menu btns to hide if client
-  @IBOutlet weak var earningsBtn: UIButton!
-  @IBOutlet weak var scantToolBtn: UIButton!
-  @IBOutlet weak var requestListBtn: UIButton?
-  @IBOutlet weak var requestMapBtn: UIButton?
-  @IBOutlet weak var deliveredMenuBtn: UIButton?
-  @IBOutlet weak var ordersTakenBtn: UIButton?
+//  @IBOutlet weak var earningsBtn: UIButton!
+//  @IBOutlet weak var scantToolBtn: UIButton!
+//  @IBOutlet weak var requestListBtn: UIButton?
+//  @IBOutlet weak var requestMapBtn: UIButton?
+//  @IBOutlet weak var deliveredMenuBtn: UIButton?
+//  @IBOutlet weak var ordersTakenBtn: UIButton?
   
   
   var menuOut: Bool = false
@@ -46,10 +46,12 @@ class OrdersRootController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     setupViews()
   }
   
   private func setupViews() {
+    menuView.delegate = self
     blackScreenView.isHidden = true
     topMenuView.layer.borderWidth = 0.5
     topMenuView.layer.borderColor = UIColor.lightGray.cgColor
@@ -61,6 +63,13 @@ class OrdersRootController: UIViewController {
     pageView.leftAnchor.constraint(equalTo: pageContainerView.leftAnchor, constant: 0).isActive = true
     pageView.bottomAnchor.constraint(equalTo: pageContainerView.bottomAnchor, constant: 0).isActive = true
     pageView.rightAnchor.constraint(equalTo: pageContainerView.rightAnchor, constant: 0).isActive = true
+    
+    view.addSubview(menuView)
+    menuView.translatesAutoresizingMaskIntoConstraints = false
+    menuView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+    menuView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -247.5).isActive = true
+    menuView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    menuView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
 
   }
   
@@ -103,61 +112,61 @@ class OrdersRootController: UIViewController {
   
   
   //Menu buttons
-  @IBAction func didTapEditProfileBtn(_ sender: Any) {
-    tag = 1
-    Segue.toAgentProfileForm.perform(inViewController: self)
-  }
-  
-  
-  @IBAction func didTapOrderSummaryBtn(_ sender: Any) {
-    tag = 2
-    Segue.toWebViewForm.perform(inViewController: self)
-  }
-  
-  @IBAction func didTapMarketBtn(_ sender: Any) {
-    tag = 3
-    Segue.toWebViewForm.perform(inViewController: self)
-  }
-  
-  @IBAction func didTapRatingsBtn(_ sender: Any) {
-    tag = 4
-    Segue.toWebViewForm.perform(inViewController: self)
-  }
-  
-  @IBAction func didTapRequestListBtn(_ sender: Any) {
-    tag = 5
-    Segue.toWebViewForm.perform(inViewController: self)
-  }
-  
-  @IBAction func didTapRequestMapBtn(_ sender: Any) {
-    tag = 6
-    Segue.toWebViewForm.perform(inViewController: self)
-  }
-  
-  @IBAction func didTapOrdersTakenBtn(_ sender: Any) {
-    tag = 7
-    Segue.toWebViewForm.perform(inViewController: self)
-  }
-  
-  @IBAction func didTapDeliveredMenuBtn(_ sender: Any) {
-    tag = 8
-    Segue.toWebViewForm.perform(inViewController: self)
-  }
-  
-  @IBAction func didTapEarningsBtn(_ sender: Any) {
-    tag = 9
-    Segue.toWebViewForm.perform(inViewController: self)
-  }
-  
-  @IBAction func didTapScanToolBtn(_ sender: Any) {
-    tag = 10
-    Segue.toQRScanner.perform(inViewController: self)
-  }
-  
-  @IBAction func didTapLogoutBtn(_ sender: Any) {
-    tag = 11
-    Segue.toLoginForm.perform(inViewController: self)
-  }
+//  @IBAction func didTapEditProfileBtn(_ sender: Any) {
+//    tag = 1
+//    Segue.toAgentProfileForm.perform(inViewController: self)
+//  }
+//
+//
+//  @IBAction func didTapOrderSummaryBtn(_ sender: Any) {
+//    tag = 2
+//    Segue.toWebViewForm.perform(inViewController: self)
+//  }
+//
+//  @IBAction func didTapMarketBtn(_ sender: Any) {
+//    tag = 3
+//    Segue.toWebViewForm.perform(inViewController: self)
+//  }
+//
+//  @IBAction func didTapRatingsBtn(_ sender: Any) {
+//    tag = 4
+//    Segue.toWebViewForm.perform(inViewController: self)
+//  }
+//
+//  @IBAction func didTapRequestListBtn(_ sender: Any) {
+//    tag = 5
+//    Segue.toWebViewForm.perform(inViewController: self)
+//  }
+//
+//  @IBAction func didTapRequestMapBtn(_ sender: Any) {
+//    tag = 6
+//    Segue.toWebViewForm.perform(inViewController: self)
+//  }
+//
+//  @IBAction func didTapOrdersTakenBtn(_ sender: Any) {
+//    tag = 7
+//    Segue.toWebViewForm.perform(inViewController: self)
+//  }
+//
+//  @IBAction func didTapDeliveredMenuBtn(_ sender: Any) {
+//    tag = 8
+//    Segue.toWebViewForm.perform(inViewController: self)
+//  }
+//
+//  @IBAction func didTapEarningsBtn(_ sender: Any) {
+//    tag = 9
+//    Segue.toWebViewForm.perform(inViewController: self)
+//  }
+//
+//  @IBAction func didTapScanToolBtn(_ sender: Any) {
+//    tag = 10
+//    Segue.toQRScanner.perform(inViewController: self)
+//  }
+//
+//  @IBAction func didTapLogoutBtn(_ sender: Any) {
+//    tag = 11
+//    Segue.toLoginForm.perform(inViewController: self)
+//  }
   
 }
 
@@ -178,10 +187,81 @@ extension OrdersRootController {
         destination.urlString = "https://starbucks.com"
       case 4:
         destination.urlString = "https://medium.com"
+      case 5:
+        destination.urlString = "https://facebook.com"
+      case 6:
+        destination.urlString = "https://youtube.com"
+      case 7:
+        destination.urlString = "https://starbucks.com"
+      case 8:
+        destination.urlString = "https://medium.com"
       default:
         return
       }
     }
   }
+}
+
+extension OrdersRootController: MenuViewDelegate {
+  func didTapEditBtn() {
+    Segue.toAgentProfileForm.perform(inViewController: self)
+  }
+  
+  func didTapOrderSummaryBtn() {
+    let id = self.restorationIdentifier
+    if id == "OrdersRootController" {
+      menuOut = false
+      UIView.animate(withDuration: 0.3, animations: { [weak self] in
+        self?.menuView.transform = .identity
+        self?.blackScreenView.isHidden = true
+        self?.blackScreenView.layer.zPosition = 1
+      }) { (_) in
+        //        completion here
+      }
+    } else {
+      //segue to order root controller
+      print("go to order root controller")
+    }
+  }
+  
+  func didTapMarketBtn() {
+    tag = 2
+    Segue.toWebViewForm.perform(inViewController: self)
+  }
+  
+  func didTapRequestListBtn() {
+    tag = 3
+    Segue.toWebViewForm.perform(inViewController: self)
+  }
+  
+  func didTapRequestMapBtn() {
+    tag = 4
+    Segue.toWebViewForm.perform(inViewController: self)
+  }
+  
+  func didTapOrdersTakenBtn() {
+    tag = 5
+    Segue.toWebViewForm.perform(inViewController: self)
+  }
+  
+  func didTapDeliveredMenuBtn() {
+    tag = 6
+    Segue.toWebViewForm.perform(inViewController: self)
+  }
+  
+  func didTapEarningsBtn() {
+    tag = 7
+    Segue.toWebViewForm.perform(inViewController: self)
+  }
+  
+  func didTapScanToolBtn() {
+    Segue.toQRScanner.perform(inViewController: self)
+  }
+  
+  func didTapLogoutBtn() {
+    Segue.toLoginForm.perform(inViewController: self)
+  }
+  
+  
 }
 

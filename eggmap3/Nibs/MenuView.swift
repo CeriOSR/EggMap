@@ -12,6 +12,9 @@ class MenuView: UIView {
   
   var delegate: MenuViewDelegate?
   
+  @IBOutlet weak var profileImageView: UIImageView?
+  @IBOutlet weak var nameLbl: UILabel?
+  
   //Menu btns to hide if client
   @IBOutlet weak var earningsBtn: UIButton!
   @IBOutlet weak var scantToolBtn: UIButton!
@@ -22,7 +25,8 @@ class MenuView: UIView {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    
+    profileImageView?.layer.cornerRadius = 37.5
+    profileImageView?.layer.masksToBounds = true
   }
 
     /*
@@ -35,49 +39,48 @@ class MenuView: UIView {
   
   //Menu buttons
   @IBAction func didTapEditProfileBtn(_ sender: Any) {
-    tag = 1
+    delegate?.didTapEditBtn()
   }
   
   
   @IBAction func didTapOrderSummaryBtn(_ sender: Any) {
-    tag = 2
+    delegate?.didTapOrderSummaryBtn()
   }
   
   @IBAction func didTapMarketBtn(_ sender: Any) {
-    tag = 3
+    delegate?.didTapMarketBtn()
   }
   
   @IBAction func didTapRatingsBtn(_ sender: Any) {
-    tag = 4
+    //nothing yet
   }
   
   @IBAction func didTapRequestListBtn(_ sender: Any) {
-    tag = 5
+    delegate?.didTapRequestListBtn()
   }
   
   @IBAction func didTapRequestMapBtn(_ sender: Any) {
-    tag = 6
+    delegate?.didTapRequestMapBtn()
   }
   
   @IBAction func didTapOrdersTakenBtn(_ sender: Any) {
-    tag = 7
-//    Segue.toWebViewForm.perform(inViewController: self)
+    delegate?.didTapOrdersTakenBtn()
   }
   
   @IBAction func didTapDeliveredMenuBtn(_ sender: Any) {
-    tag = 8
+    delegate?.didTapDeliveredMenuBtn()
   }
   
   @IBAction func didTapEarningsBtn(_ sender: Any) {
-    tag = 9
+    delegate?.didTapEarningsBtn()
   }
   
   @IBAction func didTapScanToolBtn(_ sender: Any) {
-    tag = 10
+    delegate?.didTapScanToolBtn()
   }
   
   @IBAction func didTapLogoutBtn(_ sender: Any) {
-    tag = 11
+    delegate?.didTapLogoutBtn()
   }
 
 }

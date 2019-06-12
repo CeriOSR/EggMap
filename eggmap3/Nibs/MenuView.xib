@@ -445,7 +445,9 @@
             <connections>
                 <outlet property="deliveredMenuBtn" destination="QUT-U9-gNf" id="0kF-R3-slS"/>
                 <outlet property="earningsBtn" destination="Gxo-Fm-I6a" id="Ors-Zn-Rr2"/>
+                <outlet property="nameLbl" destination="4Ee-zK-d8J" id="HKE-oc-nzv"/>
                 <outlet property="ordersTakenBtn" destination="Ksf-Ii-Bep" id="RZK-QG-ar7"/>
+                <outlet property="profileImageView" destination="Liv-PQ-uEj" id="maQ-vI-s7i"/>
                 <outlet property="requestListBtn" destination="qyU-6h-cvT" id="rD6-fE-NIW"/>
                 <outlet property="requestMapBtn" destination="f5J-HR-7Lq" id="Ypv-H2-dUM"/>
                 <outlet property="scantToolBtn" destination="kyL-7O-iZR" id="Pxj-1J-QmF"/>
