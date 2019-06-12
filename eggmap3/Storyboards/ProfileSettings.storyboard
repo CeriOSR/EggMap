@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rwT-kc-6mU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Agent Profile Controller-->
         <scene sceneID="Jrh-Qc-4DH">
             <objects>
-                <tableViewController id="ghc-5C-sbj" sceneMemberID="viewController">
+                <tableViewController id="ghc-5C-sbj" customClass="AgentProfileController" customModule="eggmap3" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BiE-X8-AgD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5WR-NC-saM">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="young-asian-man-smile-face_sfashzql__F0000" translatesAutoresizingMaskIntoConstraints="NO" id="5WR-NC-saM">
                                     <rect key="frame" x="137.5" y="30" width="100" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="5WR-NC-saM" secondAttribute="height" multiplier="1:1" id="dbh-SS-Y5j"/>
@@ -68,7 +68,7 @@
                             <viewLayoutGuide key="safeArea" id="RUP-iT-w2j"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="rYD-eC-84V" customClass="ProfileAddressCell" customModule="eggmap3" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileAddressCell" rowHeight="150" id="rYD-eC-84V" customClass="ProfileAddressCell" customModule="eggmap3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="248" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rYD-eC-84V" id="Lp8-8H-zrx">
@@ -145,6 +145,12 @@
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="WXW-LU-dqM"/>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="812"/>
+                    <connections>
+                        <outlet property="emailLbl" destination="weq-LU-XkJ" id="t8b-BT-cyh"/>
+                        <outlet property="nameLbl" destination="7KN-0m-xtx" id="x5D-I6-CaK"/>
+                        <outlet property="phoneLbl" destination="q0G-ud-Y78" id="nKa-ff-13k"/>
+                        <outlet property="profileImageView" destination="5WR-NC-saM" id="VHq-Zb-VIU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WqA-wt-W73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,4 +175,7 @@
             <point key="canvasLocation" x="864.79999999999995" y="87.706146926536732"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="young-asian-man-smile-face_sfashzql__F0000" width="600" height="316"/>
+    </resources>
 </document>

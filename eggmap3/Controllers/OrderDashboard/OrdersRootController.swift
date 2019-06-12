@@ -12,6 +12,7 @@ fileprivate enum Segue: String {
   case toQRScanner = "seg_QRReader"
   case toLoginForm = "seg_toLoginForm"
   case toWebViewForm = "seg_WebViewForm"
+  case toAgentProfileForm = "seg_AgentProfileForm"
   
   func perform(inViewController vc: UIViewController) {
     vc.performSegue(withIdentifier: rawValue, sender: vc)
@@ -104,6 +105,7 @@ class OrdersRootController: UIViewController {
   //Menu buttons
   @IBAction func didTapEditProfileBtn(_ sender: Any) {
     tag = 1
+    Segue.toAgentProfileForm.perform(inViewController: self)
   }
   
   

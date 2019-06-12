@@ -36,7 +36,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tPb-FG-5Iu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Web Views" id="vd1-wY-Tqi"/>
+                    <navigationItem key="navigationItem" title="Web Views" id="vd1-wY-Tqi">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="WSw-UI-Nct"/>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="812"/>
                     <connections>
                         <outlet property="webView" destination="IeY-gU-SM6" id="0wV-R1-9nV"/>

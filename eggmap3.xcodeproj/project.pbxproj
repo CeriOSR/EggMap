@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D7F5AA7A7897DC3F93EB765 /* Pods_eggmap3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC2DB8427061DC6BA23A34F /* Pods_eggmap3UITests.framework */; };
 		7320712B6B231F378AB1D9FE /* Pods_eggmap3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF07487C2E9F6DAA9B1C5F99 /* Pods_eggmap3.framework */; };
+		AC53317C22B04590003CD4AB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC53317B22B04590003CD4AB /* MenuView.swift */; };
+		AC53317E22B045D2003CD4AB /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC53317D22B045D2003CD4AB /* MenuView.xib */; };
 		AC8134E42271792B0071E779 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8134E32271792B0071E779 /* Storyboard.storyboard */; };
 		AC8134E622774F600071E779 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8134E522774F600071E779 /* MapView.storyboard */; };
 		AC8134E9227750160071E779 /* MapviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8134E8227750160071E779 /* MapviewController.swift */; };
@@ -66,6 +68,8 @@
 		303BB455E569196711B31655 /* Pods-eggmap3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eggmap3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eggmap3Tests/Pods-eggmap3Tests.release.xcconfig"; sourceTree = "<group>"; };
 		492F8F9D8E1F82670C0CC3A3 /* Pods-eggmap3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eggmap3.release.xcconfig"; path = "Pods/Target Support Files/Pods-eggmap3/Pods-eggmap3.release.xcconfig"; sourceTree = "<group>"; };
 		8BA5BE223C2F89088FC78B0E /* Pods_eggmap3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eggmap3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC53317B22B04590003CD4AB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		AC53317D22B045D2003CD4AB /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		AC8134E32271792B0071E779 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		AC8134E522774F600071E779 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		AC8134E8227750160071E779 /* MapviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapviewController.swift; sourceTree = "<group>"; };
@@ -137,6 +141,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC53317A22B044C4003CD4AB /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				AC53317B22B04590003CD4AB /* MenuView.swift */,
+				AC53317D22B045D2003CD4AB /* MenuView.xib */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
 		AC8134E722774FEA0071E779 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +228,7 @@
 		ACB3E21B22591E280099B574 /* eggmap3 */ = {
 			isa = PBXGroup;
 			children = (
+				AC53317A22B044C4003CD4AB /* Nibs */,
 				AC8ED340226BAE5E00B019E0 /* Models */,
 				AC8ED33D226B99CE00B019E0 /* Extensions */,
 				ACB3E254225CF8280099B574 /* Controllers */,
@@ -437,6 +451,7 @@
 				AC8134ED22A0492D0071E779 /* QRReader.storyboard in Resources */,
 				ACB3E22222591E280099B574 /* Main.storyboard in Resources */,
 				AC8134F322A5DCAC0071E779 /* ProfileSettings.storyboard in Resources */,
+				AC53317E22B045D2003CD4AB /* MenuView.xib in Resources */,
 				AC8134EF22A0571A0071E779 /* WebViews.storyboard in Resources */,
 				AC8134E42271792B0071E779 /* Storyboard.storyboard in Resources */,
 			);
@@ -641,6 +656,7 @@
 				ACB3E25A225D2CC40099B574 /* ReadyOrdersController.swift in Sources */,
 				ACB3E25C225D2E860099B574 /* DeliveredOrdersController.swift in Sources */,
 				AC8ED34A226BB18F00B019E0 /* VendorScheduleInfo.swift in Sources */,
+				AC53317C22B04590003CD4AB /* MenuView.swift in Sources */,
 				ACB3E22522591E280099B574 /* eggmap3.xcdatamodeld in Sources */,
 				AC8134E9227750160071E779 /* MapviewController.swift in Sources */,
 				ACB3E21F22591E280099B574 /* LoginController.swift in Sources */,

@@ -19,10 +19,18 @@ struct Address {
 class AgentProfileController: UITableViewController {
 
   var addressList = [Address]()
+  
+  @IBOutlet weak var profileImageView: UIImageView?
+  @IBOutlet weak var nameLbl: UILabel?
+  @IBOutlet weak var phoneLbl: UILabel?
+  @IBOutlet weak var emailLbl: UILabel?
+  
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      addressList = [Address(name: "Meta Cafe", address: "1234 Here St.", town: "Richmond", province: "BC", available: true),
+      profileImageView?.layer.cornerRadius = (profileImageView?.bounds.height)! / 2
+      profileImageView?.layer.masksToBounds = true
+            addressList = [Address(name: "Meta Cafe", address: "1234 Here St.", town: "Richmond", province: "BC", available: true),
                     Address(name: "Home", address: "1234 Laurence St.", town: "Surrey", province: "BC", available: true),
                     Address(name: "Wife's house", address: "1234 Andrea St.", town: "Vancouver", province: "BC", available: false)]
       
@@ -31,7 +39,6 @@ class AgentProfileController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
